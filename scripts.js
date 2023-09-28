@@ -36,6 +36,14 @@ let svgs = document.querySelectorAll("#svgs svg");
 for(let i = 0; i < svgs.length; i++){
     svgs[i].style.stroke = colors[i];
 }
-for(let svg of svgs){
 
-}
+// individual element with CSS selector
+document.querySelector(".bold").style.color = "#7C9EA6";
+
+// changing DOM node content
+document.querySelector(".content_list li:first-of-type").textContent = "This is new list item text";
+
+document.querySelectorAll(".content_list li")[2].innerHTML += " <strong>Jeffrey Le</strong>";
+
+// removing attributes
+document.querySelector("#remove a").removeAttribute("hidden");
